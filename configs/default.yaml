@@ -1,0 +1,35 @@
+# Full configuration reproducing the paper's evaluation protocol (Sec. 4-5).
+sim:
+  modules: [onboarding, employee_records, leave, payroll, exit]
+  n_nodes: 3                 # 3-node Kubernetes cluster
+  session_minutes: 30
+  n_runs: 100               # repeated 100 times for averaging
+  events_per_session: 2000
+  benign_ratio: 0.85        # ~85% benign / 15% ransomware
+  seed: 42
+
+detect:
+  n_bins: 16
+  kl_threshold: 3.0         # epsilon (Eq. 8)
+  window: 10
+  score_window: 10
+  baseline_window: 300
+  ewma_alpha: 0.3
+  cusum_k: 0.5
+  cusum_h: 8.0
+
+mtd:
+  mutation_interval_s: 60.0        # favourable trade-off (Sec. 5)
+  min_mutation_interval_s: 10.0    # T_min cooldown
+  lambda_cost: 0.5                 # trade-off weight (Eq. 7)
+  cpu_budget: 100.0
+  mem_budget: 100.0
+  ip_hop_cost: 3.2
+  container_mut_cost: 9.5
+  node_reassign_cost: 16.0
+  ip_hop_latency_ms: 38.0
+  container_mut_latency_ms: 114.0
+  node_reassign_latency_ms: 192.0
+  compliance_weight: 1.0
+
+output_dir: outputs/default

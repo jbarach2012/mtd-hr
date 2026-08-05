@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite both the software and the paper."
+title: "MTD-HR: Enhancing Ransomware Resilience in Cloud-Based HR Systems through Moving Target Defense"
+authors:
+  - family-names: "Barach"
+    given-names: "Jay"
+version: 1.0.0
+license: CC-BY-4.0
+date-released: "2025-12-09"
+doi: "10.32604/cmc.2025.071705"
+url: "https://doi.org/10.32604/cmc.2025.071705"
+preferred-citation:
+  type: article
+  title: "Enhancing Ransomware Resilience in Cloud-Based HR Systems through Moving Target Defense"
+  authors:
+    - family-names: "Barach"
+      given-names: "Jay"
+  journal: "Computers, Materials & Continua"
+  year: 2025
+  volume: 86
+  issue: 2
+  doi: "10.32604/cmc.2025.071705"
+  publisher:
+    name: "Tech Science Press"

@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mtd-hr"
+version = "1.0.0"
+description = "MTD-HR: Moving Target Defense for ransomware resilience in cloud-based HR SaaS (CMC 2026)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "CC-BY-4.0" }
+authors = [{ name = "Jay Barach" }]
+keywords = ["moving-target-defense", "ransomware", "hr-saas", "kubernetes", "anomaly-detection", "kl-divergence", "cloud-security"]
+classifiers = ["Programming Language :: Python :: 3", "Intended Audience :: Science/Research", "Topic :: Security"]
+dependencies = ["numpy>=1.24", "pandas>=2.0", "scikit-learn>=1.3", "pyyaml>=6.0"]
+
+[project.optional-dependencies]
+viz = ["matplotlib>=3.7"]
+dev = ["pytest>=7.4", "pytest-cov>=4.1", "ruff>=0.4"]
+all = ["matplotlib>=3.7", "pytest>=7.4", "ruff>=0.4"]
+
+[project.scripts]
+mtd-hr-run = "mtd_hr.run:main"
+
+[project.urls]
+Paper = "https://doi.org/10.32604/cmc.2025.071705"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"

@@ -1,0 +1,14 @@
+Enhancing Ransomware Resilience in Cloud-Based HR Systems through
+Moving Target Defense (MTD-HR)
+=================================================================
+
+Reference implementation for the CMC paper:
+
+  Jay Barach. 2025. "Enhancing Ransomware Resilience in Cloud-Based HR Systems
+  through Moving Target Defense." Computers, Materials & Continua (CMC), 2026,
+  86(2). Tech Science Press. DOI: https://doi.org/10.32604/cmc.2025.071705
+
+LICENSE: Creative Commons Attribution 4.0 International (CC BY 4.0). See LICENSE.
+  Copyright © 2025 The Author.
+
+If you use this code, please cite the CMC paper above.

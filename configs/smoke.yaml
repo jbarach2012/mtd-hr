@@ -1,0 +1,13 @@
+sim:
+  n_runs: 5
+  events_per_session: 1500
+  benign_ratio: 0.85
+  seed: 42
+detect:
+  kl_threshold: 3.0
+  window: 10
+  score_window: 10
+  baseline_window: 300
+mtd:
+  mutation_interval_s: 60.0
+output_dir: outputs/smoke
